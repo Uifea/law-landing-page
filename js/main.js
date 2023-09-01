@@ -3,28 +3,34 @@
 
 'use strict'
 
-const navList = document.querySelector('.header-page__navigation');
-const btnMenuOpnening = document.querySelector('.burger-menu-open');
-const btnMenuClosing = document.querySelector('.burger-menu-close');
+// const navList = document.querySelector('.header-page__navigation');
+// const btnMenuOpnening = document.querySelector('.burger-menu-open');
+// const btnMenuClosing = document.querySelector('.burger-menu-close');
 
-btnMenuOpnening.addEventListener('click', () => {
-    navList.classList.remove('hide');
-    navList.classList.add('show');
-    btnMenuClosing.classList.remove('hide');
-    btnMenuClosing.classList.add('show');
-
-
-    btnMenuOpnening.classList.add('hide');
-});
-
-btnMenuClosing.addEventListener('click', () => {
-    navList.classList.remove('show');
-    navList.classList.add('hide');
-    btnMenuOpnening.classList.remove('hide');
-    btnMenuOpnening.classList.add('show');
+// btnMenuOpnening.addEventListener('click', () => {
+//     navList.classList.remove('hide');
+//     navList.classList.add('show');
+//     btnMenuClosing.classList.remove('hide');
+//     btnMenuClosing.classList.add('show');
 
 
-    btnMenuClosing.classList.add('hide');
+//     btnMenuOpnening.classList.add('hide');
+// });
+
+// btnMenuClosing.addEventListener('click', () => {
+//     navList.classList.remove('show');
+//     navList.classList.add('hide');
+//     btnMenuOpnening.classList.remove('hide');
+//     btnMenuOpnening.classList.add('show');
+
+
+//     btnMenuClosing.classList.add('hide');
+// });
+
+$(document).ready(function() {
+  $('.header-page__burger').click(function(event) {
+    $('.header-page__burger, .header-page__navigation').toggleClass('active');
+  });
 });
 
 function onEntry(entry) {
